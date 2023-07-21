@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".taskDetails">
+
+    <TextView
+        android:id="@+id/tv_taskDetailsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TASK DETAILS"
+        android:textSize="35sp"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_taskid_taskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Id"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/tv_taskid_taskDetailsCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task 123"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_taskSubject_taskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/tv_taskSubject_taskDetailsCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meeting"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_taskDescription_taskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/tv_taskDescription_taskDetailsCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There is a meeting at 12:30PM. You are requested to be assembled in the conference room. Mr. abc will address the issues faced by the customers."/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_dueDate_taskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Due Date:"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/tv_dueDate_taskDetailsCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25-07-2023"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_dueTime_taskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Due Time:"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/tv_dueTime_taskDetailsCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:45:00"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

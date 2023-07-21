@@ -32,6 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
+                android:text="Employee Name"
                 android:textSize="22sp"/>
 
             <TextView
@@ -39,6 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
+                android:text="Employee Designation"
                 android:textSize="22sp"/>
             
         </LinearLayout>
@@ -52,7 +54,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/cv_tasks"
         app:cardElevation="8dp"
-        android:layout_margin="8dp">
+        android:layout_margin="8dp"
+        android:layout_marginTop="30dp">
 
         <TextView
             android:id="@+id/tv_tasks"
@@ -71,7 +74,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/cv_myteam"
         app:cardElevation="8dp"
-        android:layout_margin="8dp">
+        android:layout_margin="8dp"
+        android:layout_marginTop="30dp">
 
         <TextView
             android:id="@+id/tv_myteam"
@@ -88,7 +92,7 @@
     <FrameLayout
         android:id="@+id/framelayout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="270dp"
         android:layout_marginBottom="?attr/actionBarSize"
         />
     <com.google.android.material.bottomnavigation.BottomNavigationView

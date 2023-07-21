@@ -36,6 +36,13 @@ public class signUp extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        bt_signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(signUp.this, Profile.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

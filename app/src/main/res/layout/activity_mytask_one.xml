@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mytask_one">
+
+    <TextView
+        android:id="@+id/tv_taskId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Task Id:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_taskSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Subject:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_taskId" />
+
+    <TextView
+        android:id="@+id/tv_dueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Due Date:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_taskSubject" />
+
+    <TextView
+        android:id="@+id/tv_dueTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:text="Due Time:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dueDate" />
+
+    <TextView
+        android:id="@+id/tv_taskid_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="task id"
+        app:layout_constraintStart_toEndOf="@+id/tv_taskId"
+        app:layout_constraintTop_toTopOf="@+id/tv_taskId" />
+
+    <TextView
+        android:id="@+id/tv_subject_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Subject"
+        app:layout_constraintStart_toEndOf="@+id/tv_taskSubject"
+        app:layout_constraintTop_toTopOf="@+id/tv_taskSubject" />
+
+    <TextView
+        android:id="@+id/tv_dueDate_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Due Date"
+        app:layout_constraintStart_toEndOf="@+id/tv_dueDate"
+        app:layout_constraintTop_toTopOf="@+id/tv_dueDate" />
+
+    <TextView
+        android:id="@+id/tv_dueTime_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Due time"
+        app:layout_constraintStart_toEndOf="@+id/tv_dueTime"
+        app:layout_constraintTop_toTopOf="@+id/tv_dueTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

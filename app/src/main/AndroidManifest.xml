@@ -13,6 +13,33 @@
         android:theme="@style/Theme.TaskManager"
         tools:targetApi="31">
         <activity
+            android:name=".myTeam_One"
+            android:exported="false" />
+        <activity
+            android:name=".MYTEAM"
+            android:exported="false" />
+        <activity
+            android:name=".TASKS"
+            android:exported="false" />
+        <activity
+            android:name=".taskDetails"
+            android:exported="false" />
+        <activity
+            android:name=".myCalendar"
+            android:exported="false" />
+        <activity
+            android:name=".allTasks"
+            android:exported="false" />
+        <activity
+            android:name=".myWeek"
+            android:exported="false" />
+        <activity
+            android:name=".mytask_one"
+            android:exported="false" />
+        <activity
+            android:name=".myTasks"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity

@@ -16,10 +16,21 @@ public class MYTEAM extends AppCompatActivity {
     String[] designation = {"Senior Dev","Junior Dev","System Engineer","FrontEnd Dev","BackEnd Dev","Devops","Human Resource",
     "SupplyChain Mang","Junior Dev","System Engineer","FrontEnd Dev","BackEnd Dev","Devops"};
 
+    int[] images = {R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,
+            R.drawable.ic_launcher_foreground, R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,
+            R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,
+            R.drawable.ic_launcher_foreground, R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,
+            R.drawable.ic_launcher_foreground};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myteam);
+        lv_myteam = findViewById(R.id.lv_myteam);
+        tv_myteamTitle = findViewById(R.id.tv_myteamTitle);
+
+        CustomAdapterMyTeamList customAdapterMyTeamList = new CustomAdapterMyTeamList(getApplication(),name,designation,images);
+        lv_myteam.setAdapter(customAdapterMyTeamList);
     }
 }

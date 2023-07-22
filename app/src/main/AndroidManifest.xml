@@ -13,6 +13,18 @@
         android:theme="@style/Theme.TaskManager"
         tools:targetApi="31">
         <activity
+            android:name=".tasksPastDue"
+            android:exported="false" />
+        <activity
+            android:name=".tasksCompleted"
+            android:exported="false" />
+        <activity
+            android:name=".taskInProgress"
+            android:exported="false" />
+        <activity
+            android:name=".newTask"
+            android:exported="false" />
+        <activity
             android:name=".myTeam_One"
             android:exported="false" />
         <activity

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".newTask">
+
+    <TextView
+        android:id="@+id/tv_newTask_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CREATE A TASK"
+        android:fontFamily="@font/bungee"
+        android:textSize="35sp"
+        android:gravity="center"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_newTask_write"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardElevation="8dp"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/et_createNewTask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_newTaskDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Select Due Date:"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_newTaskDueDateCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:drawableRight="@drawable/baseline_calendar_month_24"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_newTaskDueTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Select Due Time:"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_newTaskDueTimeCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:drawableRight="@drawable/baseline_access_time_24"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

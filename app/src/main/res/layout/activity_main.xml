@@ -7,18 +7,6 @@
     android:background="#92E0EA"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/iv_splashScreen"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/splash_screen"
-        android:transitionName="splashscreen_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
@@ -34,7 +22,7 @@
         app:layout_constraintBottom_toTopOf="@id/tv_tagline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_splashScreen"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -43,10 +31,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:fontFamily="serif"
-        android:text="@string/sp_tagLine"
+        android:text="@string/tv_tagline"
         android:textColor="@color/green"
-        android:textSize="24sp"
+        android:textSize="23sp"
         android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />

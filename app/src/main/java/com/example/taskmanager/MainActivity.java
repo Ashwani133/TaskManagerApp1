@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 4000;
+    private static int SPLASH_SCREEN = 3000;
     //Variables
     Animation topAnim, bottomAnim;
     ImageView iv_splashScreen;
@@ -30,30 +30,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Animations
-        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
-        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
-        iv_splashScreen = findViewById(R.id.iv_splashScreen);
         tv_title = findViewById(R.id.tv_title);
         tv_tagline = findViewById(R.id.tv_tagline);
-
-        iv_splashScreen.setAnimation(topAnim);
-        tv_title.setAnimation(bottomAnim);
-        tv_tagline.setAnimation(bottomAnim);
 
         //To create a delay
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.this,signuplogin.class);
-                //startActivity(intent);
-                //finish();
-                //Creating pair for animation between splash screen and login screen
-                Pair[] pairs = new Pair[2];
-                pairs[0] = new Pair<View,String>(iv_splashScreen,"splashscreen_image");
-                pairs[1] = new Pair<View,String>(tv_title,"splashscreen_title");
-
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,pairs);
-                startActivity(intent,options.toBundle());
+                startActivity(intent);
+                finish();
 
             }
         },SPLASH_SCREEN);

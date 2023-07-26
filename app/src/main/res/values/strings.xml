@@ -19,6 +19,14 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="tv_tagline">Task Manager: Your Virtual Assistant</string>
+    <string name="profile_title">YOUR PROFILE</string>
+    <string name="profile_tasks">CREATE/EDIT TASKS</string>
+    <string name="profile_myteam">MY TEAM</string>
+    <string name="profile_tasksCompleted">Total Tasks Completed: </string>
+    <string name="profile_tasksInProgress">Total Tasks in Progress: </string>
+    <string name="profile_taskTracker">TASKS TRACKER</string>
+    <string name="myDailyTasks">MY DAILY TASKS</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris

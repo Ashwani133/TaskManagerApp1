@@ -14,14 +14,14 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:transitionName="splashscreen_image"
-        android:src="@drawable/login_logo"/>
+        android:src="@drawable/ic_launcher_background"/>
 
     <TextView
         android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bungee"
-        android:textSize="40sp"
+        android:fontFamily="@font/antic"
+        android:textSize="30sp"
         android:transitionName="splashscreen_title"
         android:text="@string/signin_welcome"/>
 

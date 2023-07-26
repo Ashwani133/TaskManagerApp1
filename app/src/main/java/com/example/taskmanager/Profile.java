@@ -13,7 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Profile extends AppCompatActivity {
     BottomNavigationView bottomNavigation;
-    CardView cv_tasks, cv_myteam;
+    CardView cv_tasks, cv_myteam, cv_taskTracker;
 
 
     @Override
@@ -25,6 +25,7 @@ public class Profile extends AppCompatActivity {
         bottomNavigation =findViewById(R.id.bottomNavigation);
         cv_tasks = findViewById(R.id.cv_tasks);
         cv_myteam = findViewById(R.id.cv_myteam);
+        cv_taskTracker = findViewById(R.id.cv_taskTracker);
 
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -67,6 +68,14 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Profile.this,MYTEAM.class);
+                startActivity(intent);
+            }
+        });
+
+        cv_taskTracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Profile.this,taskTracker.class);
                 startActivity(intent);
             }
         });

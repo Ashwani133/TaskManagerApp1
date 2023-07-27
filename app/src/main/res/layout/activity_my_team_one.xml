@@ -32,17 +32,13 @@
                 android:id="@+id/tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
-                android:text="Employee Name"
-                android:textSize="22sp"/>
+                android:maxLines="2" />
 
             <TextView
                 android:id="@+id/tv_designation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
-                android:text="Employee Designation"
-                android:textSize="22sp"/>
+                android:maxLines="2" />
 
         </LinearLayout>
     </LinearLayout>

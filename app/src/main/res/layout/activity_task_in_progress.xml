@@ -12,9 +12,11 @@
         android:id="@+id/tv_taskInProgressTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TASKS IN PROGRESS"
-        android:fontFamily="@font/bungee"
-        android:textSize="35sp"/>
+        android:text="@string/task_in_progress_title"
+        android:fontFamily="@font/antic"
+        android:gravity="center"
+        android:background="@color/seagreen"
+        android:textSize="30sp"/>
 
     <ListView
         android:id="@+id/lv_taskInProgess"

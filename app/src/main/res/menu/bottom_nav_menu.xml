@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="MY DAY"
+    <item android:title="@string/bottom_nav_myday"
         android:id="@+id/myday"
         android:icon="@drawable/baseline_today_24"/>
-    <item android:title="MY WEEK"
+    <item android:title="@string/bottom_nav_myweek"
         android:id="@+id/myweek"
         android:icon="@drawable/baseline_view_week_24"/>
-    <item android:title="ALL TASKS"
+    <item android:title="@string/bottom_nav_alltasks"
         android:id="@+id/alltasks"
         android:icon="@drawable/baseline_task_24"/>
-    <item android:title="CALENDAR"
-        android:id="@+id/calendar"
+    <item android:title="@string/bottom_nav_calendar"
+        android:id="@+id/taskCalendar"
         android:icon="@drawable/baseline_calendar_month_24"/>
 
 </menu>

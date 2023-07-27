@@ -11,9 +11,10 @@
         android:id="@+id/tv_myteamTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MY TEAM"
-        android:textSize="35sp"
-        android:fontFamily="@font/bungee"
+        android:text="@string/my_team_title"
+        android:textSize="30sp"
+        android:fontFamily="@font/antic"
+        android:background="@color/seagreen"
         android:gravity="center"/>
 
     <ListView

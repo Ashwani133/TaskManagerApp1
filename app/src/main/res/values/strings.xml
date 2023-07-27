@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TaskManager</string>
-    <string name="sp_title">TASK MANAGER</string>
+    <string name="sp_title">WELCOME TO TASK MANAGER</string>
     <string name="sp_tagLine">Task Manager: Your Virtual Assistant</string>
     <string name="signin_welcome">HELLO THERE, WELCOME BACK</string>
     <string name="signin_continue">Sign in to continue</string>
@@ -11,6 +11,11 @@
     <string name="signup_message">Sign to start your journey.</string>
     <string name="signup_button">Sign Up</string>
     <string name="signup_backtosignin_button">ALREADY HAVE AN ACCOUNT? LOGIN</string>
+    <string name="signup_hint_name">Full Name</string>
+    <string name="signup_hint_username">Username</string>
+    <string name="signup_email">Email</string>
+    <string name="signup_mobile">Mobile No</string>
+    <string name="signup_password">Password</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_calendar">calendar</string>
@@ -27,6 +32,32 @@
     <string name="profile_tasksInProgress">Total Tasks in Progress: </string>
     <string name="profile_taskTracker">TASKS TRACKER</string>
     <string name="myDailyTasks">MY DAILY TASKS</string>
+    <string name="myWeeklyTasks">MY WEEKLY TASKS</string>
+    <string name="myAllTasks">MY ALL TASKS</string>
+    <string name="myCalendar">MY CALENDAR</string>
+    <string name="task_title">CREATE/EDIT TASKS</string>
+    <string name="new_task">NEW TASK ?</string>
+    <string name="task_in_progress">TASKS IN PROGRESS...</string>
+    <string name="tasks_completed">TASKS COMPLETED</string>
+    <string name="task_past_due">TASKS PAST DUE !</string>
+    <string name="create_task_title">CREATE A TASK</string>
+    <string name="task_id">Task Id</string>
+    <string name="task_subject">Task Subject</string>
+    <string name="task_Description">Task Description</string>
+    <string name="select_due_date">Select Due Date:</string>
+    <string name="select_due_time">Select Due Time:</string>
+    <string name="task_in_progress_title">TASKS IN PROGRESS</string>
+    <string name="task_completed_title">TASKS COMPLETED</string>
+    <string name="tasks_past_due_title">TASKS PAST DUE</string>
+    <string name="my_team_title">MY TEAM</string>
+    <string name="tv_name">Employee Name:</string>
+    <string name="tv_designation">Employee Designation:</string>
+    <string name="task_details">TASK DETAILS</string>
+    <string name="bottom_nav_myday">MY DAY</string>
+    <string name="bottom_nav_myweek">MY WEEK</string>
+    <string name="bottom_nav_alltasks">ALL TASKS</string>
+    <string name="bottom_nav_calendar">CALENDAR</string>
+
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris

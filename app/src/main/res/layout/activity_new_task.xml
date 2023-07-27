@@ -12,21 +12,44 @@
         android:id="@+id/tv_newTask_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CREATE A TASK"
-        android:fontFamily="@font/bungee"
-        android:textSize="35sp"
+        android:text="@string/create_task_title"
+        android:fontFamily="@font/antic"
+        android:textSize="30sp"
+        android:background="@color/seagreen"
         android:gravity="center"/>
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_newTask_write"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="500dp"
         app:cardElevation="8dp"
         android:padding="8dp">
 
-        <EditText
-            android:id="@+id/et_createNewTask"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_id"
+                android:id="@+id/tv_taskId"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_subject"
+                android:id="@+id/tv_taskSubject"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_Description"
+                android:id="@+id/tv_taskDescription"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>
@@ -42,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Select Due Date:"/>
+            android:text="@string/select_due_date"/>
 
         <TextView
             android:layout_marginTop="20dp"
@@ -66,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Select Due Time:"/>
+            android:text="@string/select_due_time"/>
 
         <TextView
             android:layout_marginTop="20dp"

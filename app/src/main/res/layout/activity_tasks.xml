@@ -13,9 +13,10 @@
             android:id="@+id/tv_tasks_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TASKS"
-            android:textSize="35sp"
-            android:fontFamily="@font/bungee"
+            android:text="@string/task_title"
+            android:textSize="30sp"
+            android:fontFamily="@font/antic"
+            android:background="@color/seagreen"
             android:gravity="center"/>
 
     <androidx.cardview.widget.CardView
@@ -32,40 +33,125 @@
             android:orientation="vertical">
 
 
-        <Button
-            android:id="@+id/btn_newTask"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NEW TASK ?"
-            android:textSize="20sp"
-            android:fontFamily="@font/bungee"
-            android:layout_marginBottom="15dp"/>
+<!--        <Button-->
+<!--            android:id="@+id/btn_newTask"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="NEW TASK ?"-->
+<!--            android:textSize="20sp"-->
+<!--            android:fontFamily="@font/bungee"-->
+<!--            android:layout_marginBottom="15dp"/>-->
 
-        <Button
-            android:id="@+id/btn_taskInProgress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TASK IN PROGRESS..."
-            android:textSize="20sp"
-            android:fontFamily="@font/bungee"
-            android:layout_marginBottom="15dp"/>
 
-            <Button
-                android:id="@+id/btn_taskCompleted"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bungee"
-                android:text="TASKS COMPLETED."
-                android:textSize="20sp"
-                android:layout_marginBottom="15dp"/>
+                android:layout_height="100dp"
+                android:id="@+id/cv_newTask"
+                app:cardElevation="8dp"
+                android:layout_marginTop="50dp">
 
-            <Button
-                android:id="@+id/btn_taskPastDue"
+                <TextView
+                    android:id="@+id/tv_newTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="35sp"
+                    android:text="@string/new_task"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:background="@color/background1"
+                    android:fontFamily="@font/antic"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_taskInProgress"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="TASK IN PROGRESS..."-->
+<!--            android:textSize="20sp"-->
+<!--            android:fontFamily="@font/bungee"-->
+<!--            android:layout_marginBottom="15dp"/>-->
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TASKS PAST DUE DATE."
-                android:textSize="20sp"
-                android:fontFamily="@font/bungee"/>
+                android:layout_height="100dp"
+                android:id="@+id/cv_taskInProgress"
+                app:cardElevation="8dp"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:id="@+id/tv_taskInProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="35sp"
+                    android:text="@string/task_in_progress"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:background="@color/background1"
+                    android:fontFamily="@font/antic"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_taskCompleted"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/bungee"-->
+<!--                android:text="TASKS COMPLETED."-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginBottom="15dp"/>-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/cv_tasksCompleted"
+                app:cardElevation="8dp"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:id="@+id/tv_tasksCompleted"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="35sp"
+                    android:text="@string/tasks_completed"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:background="@color/background1"
+                    android:fontFamily="@font/antic"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_taskPastDue"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="TASKS PAST DUE DATE."-->
+<!--                android:textSize="20sp"-->
+<!--                android:fontFamily="@font/bungee"/>-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/cv_tasksPastDue"
+                app:cardElevation="8dp"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:id="@+id/tv_tasksPastDue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="35sp"
+                    android:text="@string/task_past_due"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:background="@color/background1"
+                    android:fontFamily="@font/antic"/>
+
+
+            </androidx.cardview.widget.CardView>
 
 
 

@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Profile extends AppCompatActivity {
-    BottomNavigationView bottomNavigation;
+    //BottomNavigationView bottomNavigation;
     CardView cv_tasks, cv_myteam, cv_taskTracker;
 
 
@@ -22,39 +22,39 @@ public class Profile extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_profile);
 
-        bottomNavigation =findViewById(R.id.bottomNavigation);
+        //bottomNavigation =findViewById(R.id.bottomNavigation);
         cv_tasks = findViewById(R.id.cv_tasks);
         cv_myteam = findViewById(R.id.cv_myteam);
         cv_taskTracker = findViewById(R.id.cv_taskTracker);
 
-        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id =item.getItemId();
-
-                if(id == R.id.myday){
-                    Intent intent = new Intent(Profile.this, myTasks.class);
-                    startActivity(intent);
-
-                }
-                if(id == R.id.myweek){
-                    Intent intent = new Intent(Profile.this,myWeek.class);
-                    startActivity(intent);
-                }
-
-                if(id == R.id.alltasks){
-                    Intent intent = new Intent(Profile.this,allTasks.class);
-                    startActivity(intent);
-                }
-
-                if(id == R.id.calendar){
-                    Intent intent = new Intent(Profile.this,myCalendar.class);
-                    startActivity(intent);
-                }
-
-                return true;
-            }
-        });
+//        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                int id =item.getItemId();
+//
+//                if(id == R.id.myday){
+//                    Intent intent = new Intent(Profile.this, myTasks.class);
+//                    startActivity(intent);
+//
+//                }
+//                if(id == R.id.myweek){
+//                    Intent intent = new Intent(Profile.this,myWeek.class);
+//                    startActivity(intent);
+//                }
+//
+//                if(id == R.id.alltasks){
+//                    Intent intent = new Intent(Profile.this,allTasks.class);
+//                    startActivity(intent);
+//                }
+//
+//                if(id == R.id.taskCalendar){
+//                    Intent intent = new Intent(Profile.this,myCalendar.class);
+//                    startActivity(intent);
+//                }
+//
+//                return true;
+//            }
+//        });
 
         cv_tasks.setOnClickListener(new View.OnClickListener() {
             @Override

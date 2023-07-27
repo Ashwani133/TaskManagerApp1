@@ -12,9 +12,10 @@
         android:id="@+id/tv_taskDetailsTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TASK DETAILS"
-        android:textSize="35sp"
-        android:fontFamily="@font/bungee"
+        android:text="@string/task_details"
+        android:textSize="30sp"
+        android:fontFamily="@font/antic"
+        android:background="@color/seagreen"
         android:gravity="center"/>
 
     <LinearLayout
@@ -26,13 +27,12 @@
             android:id="@+id/tv_taskid_taskDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Task Id"
+            android:text="@string/task_id"
             android:layout_marginEnd="10dp"/>
         <TextView
             android:id="@+id/tv_taskid_taskDetailsCreated"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Task 123"/>
+            android:layout_height="wrap_content" />
 
 
     </LinearLayout>
@@ -46,13 +46,12 @@
             android:id="@+id/tv_taskSubject_taskDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subject"
+            android:text="@string/task_subject"
             android:layout_marginEnd="10dp"/>
         <TextView
             android:id="@+id/tv_taskSubject_taskDetailsCreated"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Meeting"/>
+            android:layout_height="wrap_content" />
 
 
     </LinearLayout>
@@ -66,13 +65,12 @@
             android:id="@+id/tv_taskDescription_taskDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description"
+            android:text="@string/task_Description"
             android:layout_marginEnd="10dp"/>
         <TextView
             android:id="@+id/tv_taskDescription_taskDetailsCreated"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="There is a meeting at 12:30PM. You are requested to be assembled in the conference room. Mr. abc will address the issues faced by the customers."/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -85,13 +83,12 @@
             android:id="@+id/tv_dueDate_taskDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Due Date:"
+            android:text="@string/select_due_date"
             android:layout_marginEnd="10dp"/>
         <TextView
             android:id="@+id/tv_dueDate_taskDetailsCreated"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="25-07-2023"/>
+            android:layout_height="wrap_content" />
 
 
     </LinearLayout>
@@ -105,13 +102,12 @@
             android:id="@+id/tv_dueTime_taskDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Due Time:"
+            android:text="@string/select_due_time"
             android:layout_marginEnd="10dp"/>
         <TextView
             android:id="@+id/tv_dueTime_taskDetailsCreated"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="12:45:00"/>
+            android:layout_height="wrap_content" />
 
 
     </LinearLayout>

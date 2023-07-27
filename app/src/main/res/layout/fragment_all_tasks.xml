@@ -3,21 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".FragmentMyDay">
+    tools:context=".FragmentAllTasks">
 
     <!-- TODO: Update blank fragment layout -->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_FragmentMyDayTitle"
+            android:id="@+id/tv_FragmentMyAllTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/myDailyTasks"
+            android:text="@string/myAllTasks"
             android:textSize="30sp"
             android:gravity="center"
             android:background="@color/seagreen"
@@ -26,10 +24,9 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/lv_fragmentmyDay"/>
+            android:id="@+id/lv_fragmentMyAllTasks"/>
 
 
     </LinearLayout>
-
 
 </FrameLayout>

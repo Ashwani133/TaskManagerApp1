@@ -12,9 +12,10 @@
         android:id="@+id/tv_tasksCompletedTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TASKS COMPLETED"
-        android:fontFamily="@font/bungee"
-        android:textSize="35sp"
+        android:text="@string/task_completed_title"
+        android:fontFamily="@font/antic"
+        android:textSize="30sp"
+        android:background="@color/seagreen"
         android:gravity="center"/>
 
     <ListView

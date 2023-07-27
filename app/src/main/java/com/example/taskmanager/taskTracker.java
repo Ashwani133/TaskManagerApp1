@@ -13,6 +13,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class taskTracker extends AppCompatActivity {
     BottomNavigationView bottomNavigation1;
+    FragmentMyDay fragmentMyDay = new FragmentMyDay();
+    FragmentMyWeek fragmentMyWeek = new FragmentMyWeek();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,17 +22,31 @@ public class taskTracker extends AppCompatActivity {
         setContentView(R.layout.activity_task_tracker);
         bottomNavigation1 = findViewById(R.id.bottomNavigation1);
 
+
         bottomNavigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 int id =item.getItemId();
-                if (id==R.id.myday){
-                    loadFrag(new FragmentMyDay(),false);
+
+                if (id==R.id.myweek){
+                    loadFrag(new FragmentMyWeek(),false);
+
+                } else if (id==R.id.alltasks) {
+
+                    loadFrag(new FragmentAllTasks(), false);
+
+                } else if (id==R.id.taskCalendar) {
+
+                    loadFrag(new FragmentCalendar(),false);
+                    
+                }else{
+                        loadFrag(new FragmentMyDay(),false);
                 }
                 return true;
             }
         });
+            bottomNavigation1.setSelectedItemId(R.id.myday);
 
 
     }
@@ -41,10 +57,10 @@ public class taskTracker extends AppCompatActivity {
 
         if (flag)
 
-            ft.add(R.id.container, fragment);
+            ft.add(R.id.container1, fragment);
 
         else
-            ft.replace(R.id.container,fragment);
+            ft.replace(R.id.container1,fragment);
 
 
 

@@ -12,9 +12,10 @@
         android:id="@+id/tv_tasksPastDueTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TASKS PAST DUE"
-        android:fontFamily="@font/bungee"
-        android:textSize="35sp"
+        android:text="@string/tasks_past_due_title"
+        android:fontFamily="@font/antic"
+        android:textSize="30sp"
+        android:background="@color/seagreen"
         android:gravity="center"/>
 
     <ListView

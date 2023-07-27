@@ -7,17 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SearchView;
-import android.widget.TextView;
 
 
-public class FragmentMyDay extends Fragment {
-    ListView lv_fragmentmyDay;
-    SearchView searchView;
+public class FragmentMyWeek extends Fragment {
+    ListView lv_fragmentMyWeek;
 
-    String[] mytasksId = {"Task 20", "Task 300", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8",
+    String[] mytasksId = {"Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8",
             "Task 9", "Task 10", "Task 11", "Task 12", "Task 13",};
     String[] mytasksSubject = {"New account","Make Payment","New Orders","Delivery Issue","Meeting","Conference",
             "Conference Call", "New account","Make Payment","New Orders","Delivery Issue","Meeting","Conference"};
@@ -26,24 +22,22 @@ public class FragmentMyDay extends Fragment {
     String[] mytasksTime = {"12:00:00", "11:00:00","13:00:00","14:30:00","15:45:00","16:15:00","10:45:00","12:00:00",
             "11:00:00","13:00:00","14:30:00","15:45:00","16:15:00","10:45:00",};
 
-    public FragmentMyDay() {
+
+    public FragmentMyWeek() {
         // Required empty public constructor
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container1,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View view = inflater.inflate(R.layout.fragment_my_day,container1,false);
-        lv_fragmentmyDay = (ListView) view.findViewById(R.id.lv_fragmentmyDay);
-        CustomAdapterFragmentMyDay customAdapterFragmentMyDay = new CustomAdapterFragmentMyDay(getActivity(),mytasksId,mytasksSubject,mytasksDate,mytasksTime);
-        lv_fragmentmyDay.setAdapter(customAdapterFragmentMyDay);
+        View view = inflater.inflate(R.layout.fragment_my_week,container1,false);
+        lv_fragmentMyWeek = (ListView) view.findViewById(R.id.lv_fragmentMyWeek);
+        CustomAdapterFragmentMyWeek customAdapterFragmentMyWeek = new CustomAdapterFragmentMyWeek(getActivity(),mytasksId,mytasksSubject,mytasksDate,mytasksTime);
+        lv_fragmentMyWeek.setAdapter(customAdapterFragmentMyWeek);
         return view;
 
-
     }
-
-
-
 }

@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Full Name">
+            android:hint="@string/signup_hint_name">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_signup_fullname"
@@ -54,7 +54,7 @@
             android:id="@+id/tv_signup_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="@string/signup_hint_username"
             app:counterMaxLength="15"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
@@ -71,7 +71,7 @@
             android:id="@+id/tv_signup_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/signup_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
 
@@ -87,7 +87,7 @@
             android:id="@+id/tv_signup_mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mobile no"
+            android:hint="@string/signup_mobile"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
 
@@ -103,7 +103,7 @@
             android:id="@+id/tv_signup_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/signup_password"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
@@ -122,7 +122,7 @@
         android:id="@+id/bt_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000"
+        android:background="@color/seagreen"
         android:text="@string/signup_button"
         android:textColor="@color/white"/>
 

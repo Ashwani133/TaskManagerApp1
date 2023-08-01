@@ -2,7 +2,7 @@
     <string name="app_name">TaskManager</string>
     <string name="sp_title">WELCOME TO TASK MANAGER</string>
     <string name="sp_tagLine">Task Manager: Your Virtual Assistant</string>
-    <string name="signin_welcome">HELLO THERE, WELCOME BACK</string>
+    <string name="signin_welcome">Hello there, welcome back.</string>
     <string name="signin_continue">Sign in to continue</string>
     <string name="signin_forgot">Forgot Password</string>
     <string name="signin_login">log in </string>
@@ -57,6 +57,9 @@
     <string name="bottom_nav_myweek">MY WEEK</string>
     <string name="bottom_nav_alltasks">ALL TASKS</string>
     <string name="bottom_nav_calendar">CALENDAR</string>
+    <string name="login_title">TASK MANAGER</string>
+    <string name="opt_menu_home">HOME</string>
+    <string name="opt_menu_search">SEARCH</string>
 
 
     <string name="lorem_ipsum">

@@ -1,6 +1,7 @@
 package com.example.taskmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,16 +19,19 @@ public class signUp extends AppCompatActivity {
     TextInputLayout tv_signup_fullname, tv_signup_username, tv_signup_email, tv_signup_mobile, tv_signup_password;
     TextInputEditText et_signup_fullname, et_signup_username, et_signup_email, et_signup_mobile, et_signup_password;
     Button bt_signup, bt_backtosignin;
+    Toolbar signup_toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        iv_signupImage = findViewById(R.id.iv_signupImage);
         tv_welcome = findViewById(R.id.tv_welcome);
         tv_signup_msg = findViewById(R.id.tv_signup_msg);
         bt_signup = findViewById(R.id.bt_signup);
         bt_backtosignin = findViewById(R.id.bt_backtosignin);
+        signup_toolbar = findViewById(R.id.signup_toolbar);
+
+        setSupportActionBar(signup_toolbar);
 
         bt_backtosignin.setOnClickListener(new View.OnClickListener() {
             @Override

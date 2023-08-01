@@ -7,6 +7,27 @@
     android:orientation="vertical"
     tools:context=".Profile">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_toolbar"
+            android:background="@color/seagreen">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_title"
+                android:gravity="center"
+                android:textSize="17sp"/>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -17,23 +38,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="5dp">
 
-
-            <TextView
-                android:id="@+id/tv_profileTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_title"
-                android:textSize="30sp"
-                android:gravity="center_horizontal"
-                android:background="@color/seagreen"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="80dp"
                 android:weightSum="3">
 
                 <ImageView
@@ -82,7 +94,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@color/yellow"
                 android:layout_marginTop="10dp">
                 <TextView
                     android:id="@+id/tv_totalTasksCompleted"
@@ -100,8 +111,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/yellow">
+                android:orientation="horizontal">
                 <TextView
                     android:id="@+id/tasksInProgress"
                     android:layout_width="wrap_content"
@@ -115,71 +125,102 @@
 
             </LinearLayout>
 
-
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:id="@+id/cv_tasks"
-                app:cardElevation="8dp"
-                android:layout_marginTop="55dp">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:weightSum="2">
 
-                <TextView
-                    android:id="@+id/tv_tasks"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="35sp"
-                    android:text="@string/profile_tasks"
-                    android:padding="5dp"
-                    android:gravity="center"
-                    android:background="@color/background1"
-                    android:fontFamily="@font/antic"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/cv_tasks"
+                    app:cardElevation="8dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="55dp">
+
+                    <TextView
+                        android:id="@+id/tv_tasks"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="17sp"
+                        android:text="@string/profile_tasks"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:background="@color/background1"
+                        android:fontFamily="@font/antic"/>
 
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/cv_taskTracker"
+                    app:cardElevation="8dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="55dp">
+
+                    <TextView
+                        android:id="@+id/tv_taskTracker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="17sp"
+                        android:text="@string/profile_taskTracker"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:background="@color/background1"
+                        android:fontFamily="@font/antic"/>
+
+
+                </androidx.cardview.widget.CardView>
 
 
 
-            <androidx.cardview.widget.CardView
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:id="@+id/cv_taskTracker"
-                app:cardElevation="8dp"
-                android:layout_marginTop="55dp">
-
-                <TextView
-                    android:id="@+id/tv_taskTracker"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="35sp"
-                    android:text="@string/profile_taskTracker"
-                    android:padding="5dp"
-                    android:gravity="center"
-                    android:background="@color/background1"
-                    android:fontFamily="@font/antic"/>
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
 
 
-            </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:id="@+id/cv_myteam"
-                app:cardElevation="8dp"
-                android:layout_marginTop="55dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/cv_myteam"
+                    app:cardElevation="8dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="55dp">
 
-                <TextView
-                    android:id="@+id/tv_myteam"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="40sp"
-                    android:text="@string/profile_myteam"
-                    android:padding="5dp"
-                    android:gravity="center"
-                    android:background="@color/background1"
-                    android:fontFamily="@font/antic"/>
+                    <TextView
+                        android:id="@+id/tv_myteam"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="17sp"
+                        android:text="@string/profile_myteam"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:background="@color/background1"
+                        android:fontFamily="@font/antic"/>
 
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
     </FrameLayout>

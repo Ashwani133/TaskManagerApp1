@@ -1,11 +1,18 @@
 package com.example.taskmanager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -13,6 +20,7 @@ public class taskInProgress extends AppCompatActivity {
 
     TextView tv_taskInProgressTitle;
     ListView lv_taskInProgess;
+    Toolbar taskInProgress_toolbar;
 
     String[] mytasksId = {"Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8",
             "Task 9", "Task 10", "Task 11", "Task 12", "Task 13",};
@@ -31,6 +39,13 @@ public class taskInProgress extends AppCompatActivity {
 
         tv_taskInProgressTitle= findViewById(R.id.tv_taskInProgressTitle);
         lv_taskInProgess = findViewById(R.id.lv_taskInProgess);
+        taskInProgress_toolbar = findViewById(R.id.taskInProgress_toolbar);
+
+        setSupportActionBar(taskInProgress_toolbar);
+
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         CustomAdapterTasksInProgress customAdapterTasksInProgress = new CustomAdapterTasksInProgress(getApplication(),mytasksId,mytasksSubject,mytasksDate
                 ,mytasksTime);
@@ -45,5 +60,23 @@ public class taskInProgress extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        new MenuInflater(this).inflate(R.menu.opt_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        if(itemId==R.id.opt_home){
+            Intent intent = new Intent(taskInProgress.this, Profile.class);
+            startActivity(intent);
+        }else{
+            super.onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

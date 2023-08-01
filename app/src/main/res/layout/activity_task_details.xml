@@ -8,15 +8,29 @@
     android:orientation="vertical"
     tools:context=".taskDetails">
 
-    <TextView
-        android:id="@+id/tv_taskDetailsTitle"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/task_details"
-        android:textSize="30sp"
-        android:fontFamily="@font/antic"
-        android:background="@color/seagreen"
-        android:gravity="center"/>
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/taskdetails_toolbar"
+            android:background="@color/seagreen">
+
+            <TextView
+                android:id="@+id/tv_taskDetailsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/task_details"
+                android:textSize="17sp"
+                android:fontFamily="@font/antic"
+                android:background="@color/seagreen"
+                android:gravity="center"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"

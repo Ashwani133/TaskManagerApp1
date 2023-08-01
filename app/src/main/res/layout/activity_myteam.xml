@@ -7,15 +7,29 @@
     android:orientation="vertical"
     tools:context=".MYTEAM">
 
-    <TextView
-        android:id="@+id/tv_myteamTitle"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/my_team_title"
-        android:textSize="30sp"
-        android:fontFamily="@font/antic"
-        android:background="@color/seagreen"
-        android:gravity="center"/>
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/myteam_toolbar"
+            android:background="@color/seagreen">
+
+            <TextView
+                android:id="@+id/tv_myteamTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/my_team_title"
+                android:textSize="17sp"
+                android:fontFamily="@font/antic"
+                android:gravity="center"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
 
     <ListView
         android:id="@+id/lv_myteam"

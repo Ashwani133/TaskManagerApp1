@@ -8,15 +8,29 @@
     android:orientation="vertical"
     tools:context=".taskInProgress">
 
-    <TextView
-        android:id="@+id/tv_taskInProgressTitle"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/task_in_progress_title"
-        android:fontFamily="@font/antic"
-        android:gravity="center"
-        android:background="@color/seagreen"
-        android:textSize="30sp"/>
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/taskInProgress_toolbar"
+            android:background="@color/seagreen">
+
+            <TextView
+                android:id="@+id/tv_taskInProgressTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/task_in_progress_title"
+                android:gravity="center"
+                android:textSize="17sp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
 
     <ListView
         android:id="@+id/lv_taskInProgess"

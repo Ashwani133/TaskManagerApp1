@@ -1,6 +1,7 @@
 package com.example.taskmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.Button;
 
 public class signuplogin extends AppCompatActivity {
     Button bt_newuser,bt_login;
+    Toolbar login_toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,9 @@ public class signuplogin extends AppCompatActivity {
         setContentView(R.layout.activity_signuplogin);
         bt_newuser = findViewById(R.id.bt_newuser);
         bt_login = findViewById(R.id.bt_login);
+        login_toolbar = findViewById(R.id.login_toolbar);
+
+        setSupportActionBar(login_toolbar);
 
         bt_newuser.setOnClickListener(new View.OnClickListener() {
             @Override

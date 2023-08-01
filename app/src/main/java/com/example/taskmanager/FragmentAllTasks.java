@@ -2,6 +2,8 @@ package com.example.taskmanager;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,6 +14,7 @@ import android.widget.ListView;
 public class FragmentAllTasks extends Fragment {
 
     ListView lv_fragmentMyAllTasks;
+    Toolbar fragalltask_toolbar;
 
     String[] mytasksId = {"Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8",
             "Task 9", "Task 10", "Task 11", "Task 12", "Task 13",};
@@ -31,6 +34,10 @@ public class FragmentAllTasks extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_all_tasks, container, false);
+        fragalltask_toolbar = view.findViewById(R.id.fragalltask_toolbar);
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        activity.setSupportActionBar(fragalltask_toolbar);
+
         lv_fragmentMyAllTasks = (ListView) view.findViewById(R.id.lv_fragmentMyAllTasks);
         CustomAdapterFragmentAllTasks customAdapterFragmentAllTasks = new CustomAdapterFragmentAllTasks(getActivity(),mytasksId
         ,mytasksSubject,mytasksDate,mytasksTime);

@@ -2,6 +2,8 @@ package com.example.taskmanager;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,6 +14,7 @@ import android.widget.ListView;
 
 public class FragmentMyWeek extends Fragment {
     ListView lv_fragmentMyWeek;
+    Toolbar fragmyweek_toolbar;
 
     String[] mytasksId = {"Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8",
             "Task 9", "Task 10", "Task 11", "Task 12", "Task 13",};
@@ -34,6 +37,9 @@ public class FragmentMyWeek extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_my_week,container1,false);
+        fragmyweek_toolbar = view.findViewById(R.id.fragmyweek_toolbar);
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        activity.setSupportActionBar(fragmyweek_toolbar);
         lv_fragmentMyWeek = (ListView) view.findViewById(R.id.lv_fragmentMyWeek);
         CustomAdapterFragmentMyWeek customAdapterFragmentMyWeek = new CustomAdapterFragmentMyWeek(getActivity(),mytasksId,mytasksSubject,mytasksDate,mytasksTime);
         lv_fragmentMyWeek.setAdapter(customAdapterFragmentMyWeek);

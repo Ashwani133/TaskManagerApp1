@@ -8,15 +8,28 @@
     android:orientation="vertical"
     tools:context=".newTask">
 
-    <TextView
-        android:id="@+id/tv_newTask_title"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/create_task_title"
-        android:fontFamily="@font/antic"
-        android:textSize="30sp"
-        android:background="@color/seagreen"
-        android:gravity="center"/>
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/newtask_toolbar"
+            android:background="@color/seagreen">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/create_task_title"
+                android:textSize="17sp"
+                android:gravity="center"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_newTask_write"
         android:layout_width="match_parent"
@@ -35,19 +48,49 @@
                 android:text="@string/task_id"
                 android:id="@+id/tv_taskId"/>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/task_subject"
-                android:id="@+id/tv_taskSubject"
-                android:layout_marginTop="5dp"/>
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_subject"
+                    android:id="@+id/tv_taskSubject"
+                    android:layout_marginTop="5dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter the task Subject*"
+                    android:id="@+id/et_taskSubject"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/task_Description"
-                android:id="@+id/tv_taskDescription"
-                android:layout_marginTop="5dp"/>
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_Description"
+                    android:id="@+id/tv_taskDescription"
+                    android:layout_marginTop="5dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter the task Description here.."
+                    android:id="@+id/et_taskDescription"/>
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

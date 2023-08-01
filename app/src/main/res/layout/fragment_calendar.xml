@@ -11,14 +11,30 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/myCalendar"
-            android:textSize="30sp"
-            android:fontFamily="@font/antic"
-            android:background="@color/seagreen"
-            android:gravity="center"/>
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mycalendar_toolbar"
+                android:background="@color/seagreen">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/myCalendar"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/antic"
+                    android:background="@color/seagreen"
+                    android:gravity="center"/>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
 
         <CalendarView
             android:layout_width="match_parent"

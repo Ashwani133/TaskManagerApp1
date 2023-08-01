@@ -59,4 +59,5 @@ public class CustomAdapterTasksInProgress extends BaseAdapter {
         tv_dueTime_created.setText(mytasksTime[position]);
         return convertView;
     }
+
 }

@@ -1,9 +1,14 @@
 package com.example.taskmanager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -12,6 +17,7 @@ import android.widget.TextView;
 public class tasksPastDue extends AppCompatActivity {
     TextView tv_tasksPastDueTitle;
     ListView lv_tasksPastDue;
+    Toolbar taskPastDue_toolbar;
 
     String[] mytasksId = {"Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8",
             "Task 9", "Task 10", "Task 11", "Task 12", "Task 13",};
@@ -29,6 +35,13 @@ public class tasksPastDue extends AppCompatActivity {
 
         tv_tasksPastDueTitle = findViewById(R.id.tv_tasksPastDueTitle);
         lv_tasksPastDue = findViewById(R.id.lv_tasksPastDue);
+        taskPastDue_toolbar = findViewById(R.id.taskPastDue_toolbar);
+
+        setSupportActionBar(taskPastDue_toolbar);
+
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         CustomAdapterTaskPastDue customAdapterTaskPastDue = new CustomAdapterTaskPastDue(getApplication(),mytasksId,mytasksSubject,mytasksDate
                 ,mytasksTime);
@@ -45,5 +58,23 @@ public class tasksPastDue extends AppCompatActivity {
         });
 
 
-            }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        new MenuInflater(this).inflate(R.menu.opt_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        if(itemId==R.id.opt_home){
+            Intent intent = new Intent(tasksPastDue.this, Profile.class);
+            startActivity(intent);
+        }else{
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

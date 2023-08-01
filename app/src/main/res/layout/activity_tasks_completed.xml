@@ -8,15 +8,31 @@
     android:orientation="vertical"
     tools:context=".tasksCompleted">
 
-    <TextView
-        android:id="@+id/tv_tasksCompletedTitle"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/task_completed_title"
-        android:fontFamily="@font/antic"
-        android:textSize="30sp"
-        android:background="@color/seagreen"
-        android:gravity="center"/>
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/seagreen"
+            android:id="@+id/taskCompleted_toolbar">
+
+            <TextView
+                android:id="@+id/tv_tasksCompletedTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/task_completed_title"
+                android:fontFamily="@font/antic"
+                android:textSize="17sp"
+                android:gravity="center"/>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
 
     <ListView
         android:id="@+id/lv_tasksCompleted"

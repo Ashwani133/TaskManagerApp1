@@ -1,16 +1,23 @@
 package com.example.taskmanager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 public class TASKS extends AppCompatActivity {
     Button btn_newTask,btn_taskInProgress, btn_taskCompleted, btn_taskPastDue;
     CardView cv_newTask,cv_taskInProgress,cv_tasksCompleted,cv_tasksPastDue;
+    Toolbar tasks_toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +31,13 @@ public class TASKS extends AppCompatActivity {
         cv_taskInProgress = findViewById(R.id.cv_taskInProgress);
         cv_tasksCompleted = findViewById(R.id.cv_tasksCompleted);
         cv_tasksPastDue = findViewById(R.id.cv_tasksPastDue);
+        tasks_toolbar = findViewById(R.id.tasks_toolbar);
+
+        setSupportActionBar(tasks_toolbar);
+
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         cv_newTask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,5 +69,40 @@ public class TASKS extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        new MenuInflater(this).inflate(R.menu.opt_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        if(itemId==R.id.opt_home){
+            Intent intent = new Intent(TASKS.this,Profile.class);
+            startActivity(intent);
+       }
+//        else if(itemId==R.id.opt_search){
+//            SearchView searchView = (SearchView) item.getActionView();
+//            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//                @Override
+//                public boolean onQueryTextSubmit(String query) {
+//                    return false;
+//                }
+//
+//                @Override
+//                public boolean onQueryTextChange(String newText) {
+//                    return true;
+//                }
+//            });
+//        }
+        else{
+            super.onBackPressed();
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

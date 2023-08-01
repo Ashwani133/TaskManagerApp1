@@ -11,15 +11,30 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_FragmentMyAllTitle"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/myAllTasks"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:background="@color/seagreen"
-            android:fontFamily="@font/antic"/>
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fragalltask_toolbar"
+                android:background="@color/seagreen">
+
+                <TextView
+                    android:id="@+id/tv_FragmentMyAllTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/myAllTasks"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/antic"/>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
 
         <ListView
             android:layout_width="match_parent"

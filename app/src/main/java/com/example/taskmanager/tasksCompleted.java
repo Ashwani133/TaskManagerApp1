@@ -1,9 +1,14 @@
 package com.example.taskmanager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -12,6 +17,7 @@ import android.widget.TextView;
 public class tasksCompleted extends AppCompatActivity {
     TextView tv_tasksCompletedTitle;
     ListView lv_tasksCompleted;
+    Toolbar taskCompleted_toolbar;
 
     String[] mytasksId = {"Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8",
             "Task 9", "Task 10", "Task 11", "Task 12", "Task 13",};
@@ -28,6 +34,13 @@ public class tasksCompleted extends AppCompatActivity {
         setContentView(R.layout.activity_tasks_completed);
         tv_tasksCompletedTitle = findViewById(R.id.tv_tasksCompletedTitle);
         lv_tasksCompleted = findViewById(R.id.lv_tasksCompleted);
+        taskCompleted_toolbar = findViewById(R.id.taskCompleted_toolbar);
+
+        setSupportActionBar(taskCompleted_toolbar);
+
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         CustomAdapterTasksCompleted customAdapterTasksCompleted = new CustomAdapterTasksCompleted(getApplication(),mytasksId,mytasksSubject,mytasksDate
                 ,mytasksTime);
@@ -44,5 +57,23 @@ public class tasksCompleted extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        new MenuInflater(this).inflate(R.menu.opt_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        if(itemId==R.id.opt_home){
+            Intent intent = new Intent(tasksCompleted.this,Profile.class);
+            startActivity(intent);
+        }else{
+            super.onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

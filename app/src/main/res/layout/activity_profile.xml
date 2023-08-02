@@ -139,7 +139,9 @@
                     app:cardElevation="8dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="5dp"
-                    android:layout_marginTop="55dp">
+                    android:layout_marginTop="55dp"
+                    android:foreground="?actionBarItemBackground"
+                    android:clickable="true">
 
                     <TextView
                         android:id="@+id/tv_tasks"
@@ -163,7 +165,9 @@
                     app:cardElevation="8dp"
                     android:layout_weight="1"
                     android:layout_marginStart="5dp"
-                    android:layout_marginTop="55dp">
+                    android:layout_marginTop="55dp"
+                    android:foreground="?actionBarItemBackground"
+                    android:clickable="true">
 
                     <TextView
                         android:id="@+id/tv_taskTracker"
@@ -201,7 +205,9 @@
                     android:id="@+id/cv_myteam"
                     app:cardElevation="8dp"
                     android:layout_weight="1"
-                    android:layout_marginTop="55dp">
+                    android:layout_marginTop="55dp"
+                    android:foreground="?actionBarItemBackground"
+                    android:clickable="true">
 
                     <TextView
                         android:id="@+id/tv_myteam"

@@ -11,29 +11,40 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.google.android.material.appbar.AppBarLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/seagreen">
 
-            <androidx.appcompat.widget.Toolbar
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:background="@color/seagreen"
+                android:id="@+id/btn_fragMyCalendarBack"
+                android:foreground="?actionBarItemBackground"
+                android:clickable="true"/>
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/fragMyCalendarBack"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="9dp"-->
+<!--                android:src="@drawable/baseline_arrow_back_24"/>-->
+
+            <TextView
+                android:id="@+id/tv_FragmentMyWeekTitle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/mycalendar_toolbar"
-                android:background="@color/seagreen">
+                android:layout_height="match_parent"
+                android:text="@string/myCalendar"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:fontFamily="@font/antic"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/myCalendar"
-                    android:textSize="17sp"
-                    android:fontFamily="@font/antic"
-                    android:background="@color/seagreen"
-                    android:gravity="center"/>
+        </LinearLayout>
 
-
-            </androidx.appcompat.widget.Toolbar>
-
-        </com.google.android.material.appbar.AppBarLayout>
 
 
         <CalendarView

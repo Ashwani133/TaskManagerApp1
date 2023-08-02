@@ -35,7 +35,8 @@
             android:exported="false" />
         <activity
             android:name=".TASKS"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Profile"/>
         <activity
             android:name=".taskDetails"
             android:exported="false" />

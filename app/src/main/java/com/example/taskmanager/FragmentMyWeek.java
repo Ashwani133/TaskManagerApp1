@@ -1,5 +1,6 @@
 package com.example.taskmanager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,12 +10,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 
 public class FragmentMyWeek extends Fragment {
     ListView lv_fragmentMyWeek;
     Toolbar fragmyweek_toolbar;
+    ImageView fragMyWeekBack;
+    ImageButton btn_fragMyWeekBack;
 
     String[] mytasksId = {"Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8",
             "Task 9", "Task 10", "Task 11", "Task 12", "Task 13",};
@@ -37,9 +42,19 @@ public class FragmentMyWeek extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_my_week,container1,false);
-        fragmyweek_toolbar = view.findViewById(R.id.fragmyweek_toolbar);
-        AppCompatActivity activity = (AppCompatActivity) getActivity();
-        activity.setSupportActionBar(fragmyweek_toolbar);
+        //fragmyweek_toolbar = view.findViewById(R.id.fragmyweek_toolbar);
+        //AppCompatActivity activity = (AppCompatActivity) getActivity();
+        //activity.setSupportActionBar(fragmyweek_toolbar);
+        //fragMyWeekBack = view.findViewById(R.id.fragMyWeekBack);
+        btn_fragMyWeekBack = view.findViewById(R.id.btn_fragMyWeekBack);
+        btn_fragMyWeekBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Profile.class);
+                startActivity(intent);
+            }
+        });
+
         lv_fragmentMyWeek = (ListView) view.findViewById(R.id.lv_fragmentMyWeek);
         CustomAdapterFragmentMyWeek customAdapterFragmentMyWeek = new CustomAdapterFragmentMyWeek(getActivity(),mytasksId,mytasksSubject,mytasksDate,mytasksTime);
         lv_fragmentMyWeek.setAdapter(customAdapterFragmentMyWeek);

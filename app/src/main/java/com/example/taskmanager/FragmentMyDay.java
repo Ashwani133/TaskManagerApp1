@@ -1,5 +1,6 @@
 package com.example.taskmanager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -19,6 +22,8 @@ public class FragmentMyDay extends Fragment {
     ListView lv_fragmentmyDay;
     SearchView searchView;
     Toolbar fragmyday_toolbar;
+    ImageView fragMyDayBack;
+    ImageButton btn_fragMyDayBack;
 
     String[] mytasksId = {"Task 20", "Task 300", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8",
             "Task 9", "Task 10", "Task 11", "Task 12", "Task 13",};
@@ -39,9 +44,21 @@ public class FragmentMyDay extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_my_day,container1,false);
-        fragmyday_toolbar = view.findViewById(R.id.fragmyday_toolbar);
-        AppCompatActivity activity = (AppCompatActivity) getActivity();
-        activity.setSupportActionBar(fragmyday_toolbar);
+        //fragmyday_toolbar = view.findViewById(R.id.fragmyday_toolbar);
+        //AppCompatActivity activity = (AppCompatActivity) getActivity();
+        //activity.setSupportActionBar(fragmyday_toolbar);
+        //fragMyDayBack = view.findViewById(R.id.fragMyDayBack);
+        btn_fragMyDayBack = view.findViewById(R.id.btn_fragMyDayBack);
+
+        btn_fragMyDayBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Profile.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         lv_fragmentmyDay = (ListView) view.findViewById(R.id.lv_fragmentmyDay);
         CustomAdapterFragmentMyDay customAdapterFragmentMyDay = new CustomAdapterFragmentMyDay(getActivity(),mytasksId,mytasksSubject,mytasksDate,mytasksTime);

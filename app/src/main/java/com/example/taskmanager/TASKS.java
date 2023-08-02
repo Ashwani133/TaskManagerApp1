@@ -71,19 +71,6 @@ public class TASKS extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        new MenuInflater(this).inflate(R.menu.opt_menu,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
-        if(itemId==R.id.opt_home){
-            Intent intent = new Intent(TASKS.this,Profile.class);
-            startActivity(intent);
-       }
 //        else if(itemId==R.id.opt_search){
 //            SearchView searchView = (SearchView) item.getActionView();
 //            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -98,11 +85,5 @@ public class TASKS extends AppCompatActivity {
 //                }
 //            });
 //        }
-        else{
-            super.onBackPressed();
 
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

@@ -15,30 +15,43 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.google.android.material.appbar.AppBarLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/seagreen">
 
-            <androidx.appcompat.widget.Toolbar
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:background="@color/seagreen"
+                android:id="@+id/btn_fragMyDayBack"
+                android:foreground="?actionBarItemBackground"
+                android:clickable="true"/>
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/fragMyDayBack"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="9dp"-->
+<!--                android:src="@drawable/baseline_arrow_back_24"/>-->
+
+            <TextView
+                android:id="@+id/tv_FragmentMyDayTitle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/fragmyday_toolbar"
-                android:background="@color/seagreen">
-
-                <TextView
-                    android:id="@+id/tv_FragmentMyDayTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/myDailyTasks"
-                    android:textSize="17sp"
-                    android:gravity="center"
-                    android:background="@color/seagreen"
-                    android:fontFamily="@font/antic"/>
+                android:layout_height="match_parent"
+                android:text="@string/myDailyTasks"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:background="@color/seagreen"
+                android:fontFamily="@font/antic"/>
+        </LinearLayout>
 
 
-            </androidx.appcompat.widget.Toolbar>
 
-        </com.google.android.material.appbar.AppBarLayout>
+
 
         <ListView
             android:layout_width="match_parent"

@@ -4,8 +4,8 @@
 
 
     <item android:id="@+id/opt_homes"
-        android:icon="@drawable/baseline_home_24"
-        android:title="@string/opt_menu_home"
+        android:icon="@drawable/baseline_logout_24"
+        android:title="@string/profile_logout"
         app:showAsAction="collapseActionView"/>
 
 

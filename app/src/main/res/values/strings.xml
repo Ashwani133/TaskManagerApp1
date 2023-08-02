@@ -60,6 +60,9 @@
     <string name="login_title">TASK MANAGER</string>
     <string name="opt_menu_home">HOME</string>
     <string name="opt_menu_search">SEARCH</string>
+    <string name="btn_save_task">SAVE TASK</string>
+    <string name="profile_logout">LOG OUT</string>
+    <string name="editDeleteTask">EDIT/DELETE</string>
 
 
     <string name="lorem_ipsum">

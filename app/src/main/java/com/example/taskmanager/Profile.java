@@ -90,7 +90,12 @@ public class Profile extends AppCompatActivity {
 
         }
 
-//    @Override
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        new MenuInflater(this).inflate(R.menu.opt_menu_search,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        new MenuInflater(this).inflate(R.menu.opt_menu,menu);
 //        return super.onCreateOptionsMenu(menu);

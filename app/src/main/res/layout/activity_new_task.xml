@@ -142,8 +142,17 @@
             android:ems="9"
             android:drawableRight="@drawable/baseline_access_time_24"/>
 
-
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_save_task"
+        android:textColor="@color/white"
+        android:id="@+id/btn_saveTask"/>
+
 
 
 
